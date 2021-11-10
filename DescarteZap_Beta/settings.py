@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'crispy_forms',
     'paginas.apps.PaginasConfig',
+    'cadastros.apps.CadastrosConfig',
 
 ]
 
