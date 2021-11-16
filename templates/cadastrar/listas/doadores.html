@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block content %}
-<h3>Lista de Doadores</h3>
+<h3>Endereço do Doador</h3>
 
 <hr>
 
@@ -20,7 +20,7 @@
             <th>CIDADE</th>
             <th>TEL (FIXO)</th>
             <th>CELULAR</th>
-            <th>AÇÃO</th>
+            <th>USUARIO</th>
         </tr>
 
         {% for doadores in object_list %}
@@ -35,10 +35,7 @@
             <td>{{ doadores.cidade }}</td>
             <td>{{ doadores.telefonefixo }}</td>
             <td>{{ doadores.celular }}</td>
-            <td>
-                Editar
-                Exluir
-            </td>
+            <td>{{ doadores.username }}</td>
         </tr>
         {% empty %}
         <tr>

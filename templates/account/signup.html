@@ -5,10 +5,21 @@
 {% block title %}Cadastro{% endblock %}
 
 {% block content %}
-    <h2>Cadastro</h2>
-    <form method="post">
+
+<h2>Cadastro</h2>
+
+<div class="row">
+    <div class="col-md-4 mx-auto">
+
+    <form action="" method="post">
+
+
+
         {% csrf_token %}
         {{ form|crispy }}
         <button class="btn btn-success" type="submit">Cadastrar</button>
     </form>
+
+    </div>
+</div>
 {% endblock %}

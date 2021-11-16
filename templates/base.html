@@ -19,15 +19,26 @@
                      <ul class="navbar-nav">
 
                      <li class="nav-item">
-                        <a class="nav-link" href="{% url 'cadastros:cadastrar-doadores' %}">Cadastrar Doador</a>
+                        <a class="nav-link" href="{% url 'cadastros:atualizar-dados' %}">Cadastrar Doador</a>
                      </li>
 
                      <li class="nav-item">
                         <a class="nav-link" href="{% url 'cadastros:cadastrar-doacao' %}">Cadastrar Doacao</a>
                      </li>
 
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'cadastros:listar-doacao' %}">Lista de Doações</a>
+                     </li>
+
                      <li class="nav-item">
-                        <a class="nav-link" href="{% url 'cadastros:listar-doadores' %}">Listar Doadores</a>
+                        <a class="nav-link" href="{% url 'cadastros:listar-doadores' %}">Endereço Doador</a>
+                     </li>
+
+                     <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_login' %}">
+                            <i class="fa fa-sign-in" aria-hidden="true"></i>
+                        <span id="usarname">{{ request.user }} </span>
+                        </a>
                      </li>
 
                     <li class="nav-item">
@@ -39,7 +50,7 @@
                         <a class="nav-link" href="{% url 'account_login' %}">Entrar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_signup' %}">Cadastrar</a>
+                        <a class="nav-link" href="{% url 'cadastros:cadastrar-doadores' %}">Cadastrar</a>
                     </li>
                     {% endif %}
                 </ul>
