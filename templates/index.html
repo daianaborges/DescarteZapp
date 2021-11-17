@@ -22,18 +22,22 @@
           <li><a href="index.html" class="active"><span>NOSSA EMPRESA</span></a></li>
           <li><a href="#"><span>SERVIÇOS</span></a></li>
           <li><a href="#"><span>NATUREZA</span></a></li>
-          <li><a href="/accounts/login/"></span>CADASTRO</span></a></li>
-          <link href="{% url 'paginas:home' %}"></span>DOAÇÃO</span></a></link>
+          <li><a href="{% url 'paginas:home' %}" class="active"><span> CADASTRO DOAR </span></a></li>
+          <link href="{% url 'paginas:home' %}"></span></span></a></link>
         </ul>
       </div>
-       <a href="{% url 'paginas:home' %}" class="navbar-brand">
-                <span class="font-weight-bold h3">DOAR</span>
-            </a>
+
       <div class="search">/
         <form id="form1" name="form1" method="post" action="">
           <label><span>
             <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="Pesquisa..." />
-             <a href="/accounts/logout/">Sair</a>
+             <a href="/accounts/logout/"> <span> Sair </span></a>
+            <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_login' %}">
+                            <i class="fa fa-sign-in" aria-hidden="true"></i>
+                        <span id="usarname">{{ request.user }} </span>
+                        </a>
+                     </li>
           </span>
             <input name="b" type="image" src="{% static 'img/search.gif' %}" class="button" />
           </label>

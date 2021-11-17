@@ -1,6 +1,6 @@
 import environ
 
-from DescarteZap_Beta.settings.base import *
+from descartezap_beta.settings.base import *
 
 env = environ.Env()
 

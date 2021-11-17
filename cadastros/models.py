@@ -13,7 +13,7 @@ class Doadores(models.Model):
     cidade = models.CharField(max_length=20, blank=False, null=True)
     telefonefixo = models.CharField(max_length=20, blank=False, unique=True, verbose_name="Telefone Fixo", null=True)
     celular = models.CharField(max_length=20, blank=False, unique=True, null=True)
-    username = models.ForeignKey(User,max_length=20, on_delete=models.PROTECT, unique=True, null=False)
+    username = models.ForeignKey(User,max_length=20, on_delete=models.PROTECT, null=False)
 
     def __str__(self):
         return "{} {} ({})".format(self.nome, self.bairro, self.username)
