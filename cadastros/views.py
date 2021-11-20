@@ -97,16 +97,16 @@ class DoadoresList(ListView):
         self.object_list = Doadores.objects.filter(username=self.request.user)
         return self.object_list
 
-class DoacaoList(ListView, Doadores, Doacao):
-    model = Doacao, Doadores
-    template_name = 'cadastrar/listas/doacao.html'
+#class DoacaoList(ListView, Doadores, Doacao):
+ #   model = Doacao, Doadores
+    #   template_name = 'cadastrar/listas/doacao.html'
 
-    def get_queryset(self):
-        self.object_list = Doadores.objects.filter(username=self.request.user)
-        return self.object_list
+        #  def get_queryset(self):
+        #  self.object_list = Doadores.objects.filter(username=self.request.user)
+    # return self.object_list
 
-    def get_queryset(self):
-        self.object_list = Doacao.objects.filter(username=self.request.user)
-        return self.object_list
+        # def get_queryset(self):
+        # self.object_list = Doacao.objects.filter(username=self.request.user)
+        #return self.object_list
 
 
