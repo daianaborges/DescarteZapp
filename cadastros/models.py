@@ -13,16 +13,16 @@ class Doadores(models.Model):
     cidade = models.CharField(max_length=20, blank=False, null=True)
     telefonefixo = models.CharField(max_length=20, blank=False, unique=True, verbose_name="Telefone Fixo", null=True)
     celular = models.CharField(max_length=20, blank=False, unique=True, null=True)
-    username_id = models.ForeignKey(User, max_length=20, on_delete=models.PROTECT, null=False)
+    username = models.ForeignKey(User, max_length=20, on_delete=models.PROTECT, null=False)
 
     def __str__(self):
-        return "{} {} ({})".format(self.nome, self.bairro, self.username_id)
+        return "{} {} ({})".format(self.nome, self.bairro, self.username)
 
 class Doacao(models.Model):
     quantidade = models.FloatField(verbose_name="Quantidade (l)", null=False)
     descricao = models.CharField(max_length=300, null=False, blank=False, verbose_name="Descrição")
-    username_id = models.ForeignKey(User, on_delete=models.PROTECT, null=False)
+    username = models.ForeignKey(User, on_delete=models.PROTECT, null=False)
 
 
     def __str__(self):
-        return "{} ({})".format(self.username_id, self.quantidade)
+        return "{} ({})".format(self.username, self.quantidade)
