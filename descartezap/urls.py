@@ -23,4 +23,4 @@ urlpatterns = [
     path('', include('paginas.urls', namespace='paginas') ),
     path('', include('cadastros.urls', namespace='cadastros')),
 
-]
+]# static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
