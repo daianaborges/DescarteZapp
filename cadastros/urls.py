@@ -2,7 +2,7 @@ from django.urls import path
 from . import views
 from .views import DoadoresCreate, DoacaoCreate, FormCadastro
 from .views import DoadorUpdate
-from .views import DoadoresList
+from .views import DoadoresList, DoacaoList
 from django.contrib.auth import views as auth_views
 
 
@@ -20,7 +20,7 @@ urlpatterns = [
     path('cadastros/doacao/', DoacaoCreate.as_view(), name="cadastrar-doacao"),
     # path('editar/doadores/<int:pk>/', DoadoresUpdate.as_view(), name='editar-doadores'),
     path('listar/doadores/', DoadoresList.as_view(), name='listar-doadores'),
-#    path('listar/doacao/', DoacaoList.as_view(), name='listar-doacao'),
+    path('listar/doacao/', DoacaoList.as_view(), name='listar-doacao'),
     # path("", views.SobreView.as_view(), name="home"),
 
 ]

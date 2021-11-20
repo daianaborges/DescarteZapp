@@ -75,8 +75,8 @@ class DoadorUpdate(UpdateView):
     success_url = reverse_lazy('paginas:home')
 
     def get_object(self, queryset=None):
-        self.object = get_object_or_404(Doadores, username_id=self.request.user)
-        return  self.object
+        self.object = get_object_or_404(Doadores, username=self.request.user)
+        return self.object
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
@@ -97,16 +97,13 @@ class DoadoresList(ListView):
         self.object_list = Doadores.objects.filter(username=self.request.user)
         return self.object_list
 
-#class DoacaoList(ListView, Doadores, Doacao):
- #   model = Doacao, Doadores
-    #   template_name = 'cadastrar/listas/doacao.html'
+class DoacaoList(ListView, Doacao):
+    model = Doacao
 
-        #  def get_queryset(self):
-        #  self.object_list = Doadores.objects.filter(username=self.request.user)
-    # return self.object_list
+    template_name = 'cadastrar/listas/doacao.html'
 
-        # def get_queryset(self):
-        # self.object_list = Doacao.objects.filter(username=self.request.user)
-        #return self.object_list
+    def get_queryset(self):
+        self.object_list = Doacao.objects.filter(username=self.request.user)
+        return self.object_list
 
 
