@@ -5,9 +5,6 @@ from .views import DoadorUpdate
 from .views import DoadoresList, DoacaoList
 from django.contrib.auth import views as auth_views
 
-
-
-
 app_name = "cadastros"
 
 
