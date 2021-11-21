@@ -13,7 +13,7 @@
   <div class="header">
     <div class="header_resize">
       <div class="logo">
-        <h1><a href="index.html"><span>DESCARTE</span>Zap<br />
+        <h1><a href="{% url 'paginas:home' %}"><span>DESCARTE</span>Zap<br />
           <small>SEU ÓLEO DE COZINHA DESCARTADO CORRETAMENTE</small></a></h1>
       </div>
       <div class="clr"></div>
@@ -31,7 +31,7 @@
         <form id="form1" name="form1" method="post" action="">
           <label><span>
             <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="Pesquisa..." />
-             <a href="/accounts/logout/"> <span> Sair </span></a>
+             <a href="{% url 'account_logout' %}"> <span> Sair </span></a>
             <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_login' %}">
                             <i class="fa fa-sign-in" aria-hidden="true"></i>
