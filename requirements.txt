@@ -1,3 +1,4 @@
+gunicorn==20.1.0
 appdirs==1.4.4
 asgiref==3.3.1
 astroid==2.8.4
@@ -16,7 +17,6 @@ django-crispy-forms==1.13.0
 django-environ==0.8.1
 django-heroku==0.3.1
 filelock==3.0.12
-gunicorn==20.1.0
 idna==3.3
 isort==5.9.3
 lazy-object-proxy==1.6.0
